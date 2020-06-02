@@ -19,13 +19,19 @@ h1 {
     font-family: "oswald";
 }
 
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 table {
     border-style: solid;
     border-radius: 20px;
     padding: 30px;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
+    box-shadow: 5px 10px #888888;
+    margin: 10px;
 }
 
 td {
