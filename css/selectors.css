@@ -13,3 +13,15 @@ body div.login-div {
     display: block;
     margin-bottom: 7px;
 }
+
+.login-div input[type="email"] {
+    border: 1px solid blue;
+}
+
+.login-div input[name="password"] {
+    border: 1px solid red;
+}
+
+.login-div button:hover {
+    box-shadow: 2px 2px 3px #c0c0c0;
+}

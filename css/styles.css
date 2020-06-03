@@ -13,6 +13,7 @@
 body {
     font-family: "oswald2";
     background-color: azure;
+    background-image: url(/img/seamless-pattern-burgers-fries-white-background-vector-illustration-57201619.jpg);
 }
 
 h1 {
@@ -20,22 +21,8 @@ h1 {
     font-family: "oswald";
 }
 
-main {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
-
 table {
-    border-style: solid;
+    background: aliceblue;
     border-radius: 20px;
-    padding: 30px;
-    text-align: center;
     box-shadow: inset 0 0 20px #000000;
-    margin: 10px;
-}
-
-td {
-    border-style: solid;
 }

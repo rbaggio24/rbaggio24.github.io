@@ -3,95 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Products</title>
+    <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/1195a53e08.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>Products</h1>
-    <a href="/index.html">Vissza</a>
     <br><br>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th style="font-size: 50px;" colspan="2">HAMBURGEREK</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Full w/ Angus</td>
-                    <td>10000ft</td>
-                </tr>
-                <tr>
-                    <td>Meatless</td>
-                    <td>20000ft</td>
-                </tr>
-                <tr>
-                    <td>Random</td>
-                    <td>5000ft</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2" style="color: white;">No comment</td>
-                </tr>
-            </tfoot>
-        </table>
-        <table>
-            <thead>
-                <tr>
-                    <th style="font-size: 50px;" colspan="2">KÖRETEK</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Hasábburgonya</td>
-                    <td>1000ft</td>
-                </tr>
-                <tr>
-                    <td>Saláta</td>
-                    <td>2000ft</td>
-                </tr>
-                <tr>
-                    <td>Random</td>
-                    <td>500ft</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2">&copy; 2020</td>
-                </tr>
-            </tfoot>
-        </table>
-        <table>
-            <thead>
-                <tr>
-                    <th style="font-size: 50px;" colspan="2">ÜDÍTŐK</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kóla</td>
-                    <td>1000ft</td>
-                </tr>
-                <tr>
-                    <td>Víz</td>
-                    <td>200ft</td>
-                </tr>
-                <tr>
-                    <td>Random</td>
-                    <td>50ft</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2" style="color: white;">No comment</td>
-                </tr>
-            </tfoot>
-        </table>
-    </main>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th style="font-size: 50px;" colspan="2">HAMBURGEREK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full w/ Angus</td>
+                            <td>10000ft</td>
+                        </tr>
+                        <tr>
+                            <td>Meatless</td>
+                            <td>20000ft</td>
+                        </tr>
+                        <tr>
+                            <td>Random</td>
+                            <td>5000ft</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <div class="btn-group">
+                                    <button class="btn-info btn"><i class="far fa-thumbs-up"></i></button>
+                                    <button class="btn btn-danger"><i class="far fa-thumbs-down"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th style="font-size: 50px;" colspan="2">KÖRETEK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hasábburgonya</td>
+                            <td>1000ft</td>
+                        </tr>
+                        <tr>
+                            <td>Saláta</td>
+                            <td>2000ft</td>
+                        </tr>
+                        <tr>
+                            <td>Random</td>
+                            <td>500ft</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">&copy; 2020</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th style="font-size: 50px;" colspan="2">ÜDÍTŐK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kóla</td>
+                            <td>1000ft</td>
+                        </tr>
+                        <tr>
+                            <td>Víz</td>
+                            <td>200ft</td>
+                        </tr>
+                        <tr>
+                            <td>Random</td>
+                            <td>50ft</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <div class="btn-group">
+                                    <button class="btn-info btn"><i class="far fa-thumbs-up"></i></button>
+                                    <button class="btn btn-danger"><i class="far fa-thumbs-down"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
+<a href="/index.html">Vissza</a>
 
 </html>

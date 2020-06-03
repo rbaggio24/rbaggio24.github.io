@@ -1,4 +1,8 @@
 html {
     background-color: azure;
-    background-image: url(/img/seamless-pattern-burgers-fries-white-background-vector-illustration-57201619.jpg);
+    }
+
+body {
+    background-color: azure;
+    border-radius: 15px;
 }

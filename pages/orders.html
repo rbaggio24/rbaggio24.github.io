@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Orders</title>
+    <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/colors.css">
 </head>
+
 <body>
-    <a href="/index.html"><h1>VISSZA</h1></a>
+    <h1>Rendelj ONLINE!</h1>
+    <form>
+        <fieldset>
+            <legend>Személyes adatok</legend>
+            <div>
+                <label for="name">Név: *</label>
+                <input id="name" name="name" type="text" placeholder="Név" required>
+            </div>
+            <div>
+                <label for="email">Email cím: *</label>
+                <input id="email" name="email" type="text" placeholder="Email" required>
+            </div>
+            <div>
+                <label for="address">Cím: *</label>
+                <input id="address" name="address" type="text" placeholder="Cím" required>
+            </div>
+            <div>
+                <label for="comment">Megjegyzés</label>
+                <textarea id="comment" name="comment" rows="5"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Termék adatai</legend>
+            <span>Extra feltét:</span>
+            <div>
+                <input checked type="radio" id="nothing" name="extra">
+                <label for="nothing">Nem kérek</label><br>
+                <input type="radio" id="feltet1" name="extra">
+                <label for="feltet1">Feltét 1</label><br>
+                <input type="radio" id="feltet2" name="extra">
+                <label for="feltet2">Feltét 2</label><br>
+                <input type="radio" id="feltet3" name="extra">
+                <label for="feltet3">Feltét 3</label><br>
+                <input type="radio" id="feltet4" name="extra">
+                <label for="feltet4">Feltét 4</label>
+            </div>
+            <div>
+                <label for="sauce">Szósz:</label>
+                <select name="sauce" id="sauce">
+                    <option value="0" selected>Szósz 1</option>
+                    <option value="100">Szósz 2</option>
+                </select>
+            </div>
+            <div>
+                <label for="quantity">Mennyiség: </label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+            </div>
+        </fieldset>
+        <div>
+            <input type="button" value="Rendelés leadása"> Ár: <span>1200</span> ft
+        </div>
+    </form>
+    <a href="/index.html">
+        <h1>VISSZA</h1>
+    </a>
 </body>
+
 </html>
