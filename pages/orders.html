@@ -4,67 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Orders</title>
+    <title>Rendelj ONLINE!</title>
     <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/colors.css">
 </head>
 
 <body>
-    <h1>Rendelj ONLINE!</h1>
-    <form>
-        <fieldset>
-            <legend>Személyes adatok</legend>
-            <div>
-                <label for="name">Név: *</label>
-                <input id="name" name="name" type="text" placeholder="Név" required>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form action="">
+                    <fieldset>
+                        <legend style="text-transform: uppercase;">Személyes adatok</legend>
+                        <div>
+                            <label for="name">Név: *</label>
+                            <input id="name" name="name" type="text" placeholder="Név" required>
+                        </div>
+                        <div>
+                            <label for="email">Email cím: *</label>
+                            <input id="email" name="email" type="text" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <label for="address">Cím: *</label>
+                            <input id="address" name="address" type="text" placeholder="Cím" required>
+                        </div>
+                        <div>
+                            <label for="comment">Megjegyzés</label>
+                            <textarea id="comment" name="comment" rows="2"></textarea>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend style="text-transform: uppercase;">Termék adatai</legend>
+                        <span>
+                            <h5>Extra feltét:</h5>
+                        </span>
+                        <div>
+                            <input checked type="radio" id="nothing" name="extra" value="0">
+                            <label for="nothing"> Nem kérek</label><br>
+                            <input type="radio" id="feltet1" name="extra" value="200">
+                            <label for="feltet1">Bacon</label><br>
+                            <input type="radio" id="feltet2" name="extra" value="200">
+                            <label for="feltet2">Hagyma</label><br>
+                            <input type="radio" id="feltet3" name="extra" value="200">
+                            <label for="feltet3">Tojás</label><br>
+                            <input type="radio" id="feltet4" name="extra" value="200">
+                            <label for="feltet4">Sajt</label>
+                        </div>
+                        <div>
+                            <label for="sauce">Szósz:</label>
+                            <select name="sauce" id="sauce">
+                                <option value="no" selected>Nem kérek</option>
+                                <option value="200">Ketchup</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mennyiség</label>
+                            <input type="number" name="amount-input" class="form-control" style="width: 50px;">
+                        </div>
+                    </fieldset>
+                    <div>
+                        <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button> Ár:
+                        <span class="show-amount">0</span> ft
+                    </div>
+                </form>
             </div>
-            <div>
-                <label for="email">Email cím: *</label>
-                <input id="email" name="email" type="text" placeholder="Email" required>
-            </div>
-            <div>
-                <label for="address">Cím: *</label>
-                <input id="address" name="address" type="text" placeholder="Cím" required>
-            </div>
-            <div>
-                <label for="comment">Megjegyzés</label>
-                <textarea id="comment" name="comment" rows="5"></textarea>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Termék adatai</legend>
-            <span>Extra feltét:</span>
-            <div>
-                <input checked type="radio" id="nothing" name="extra">
-                <label for="nothing">Nem kérek</label><br>
-                <input type="radio" id="feltet1" name="extra">
-                <label for="feltet1">Feltét 1</label><br>
-                <input type="radio" id="feltet2" name="extra">
-                <label for="feltet2">Feltét 2</label><br>
-                <input type="radio" id="feltet3" name="extra">
-                <label for="feltet3">Feltét 3</label><br>
-                <input type="radio" id="feltet4" name="extra">
-                <label for="feltet4">Feltét 4</label>
-            </div>
-            <div>
-                <label for="sauce">Szósz:</label>
-                <select name="sauce" id="sauce">
-                    <option value="0" selected>Szósz 1</option>
-                    <option value="100">Szósz 2</option>
-                </select>
-            </div>
-            <div>
-                <label for="quantity">Mennyiség: </label>
-                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-            </div>
-        </fieldset>
-        <div>
-            <input type="button" value="Rendelés leadása"> Ár: <span>1200</span> ft
+            <div class="col-4"></div>
         </div>
-    </form>
+    </div>
+
     <a href="/index.html">
         <h1>VISSZA</h1>
     </a>
+
+    <!--     <div class="form-group">
+        <label for="">Feltét</label>
+        <input type="text" name="top-input" class="form-control">
+    </div> -->
+
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
