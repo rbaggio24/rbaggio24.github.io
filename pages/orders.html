@@ -55,13 +55,17 @@
                         <div>
                             <label for="sauce">Szósz:</label>
                             <select name="sauce" id="sauce">
-                                <option value="no" selected>Nem kérek</option>
+                                <option value="0" selected>Nem kérek</option>
                                 <option value="200">Ketchup</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="">Mennyiség</label>
-                            <input type="number" name="amount-input" class="form-control" style="width: 50px;">
+                            <input type="number" name="amount-input" class="form-control" style="width: 60px;" value="1"
+                                min="1" max="10">
+                            <small class="form-text text-muted">
+                                Min. 1, max. 10
+                            </small>
                         </div>
                     </fieldset>
                     <div>
