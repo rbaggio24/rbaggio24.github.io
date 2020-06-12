@@ -9,7 +9,22 @@
     <link rel="stylesheet" href="/css/colors.css">
 </head>
 
-<body>
+<body onload="weatherWidget()">
+    <div class="weatherwidget">
+        <div class="float-right"><span class="show-celsius" id="celsius">0</span>&#8451;</div>
+        <h3>Időjárás</h3>
+        <div class="float-right">Mai ajánlatunk: <span class="show-offers" id="offers">-</div>
+        <select name="weatherday" id="weatherday">
+            <option value="0">Hétfő</option>
+            <option value="1">Kedd</option>
+            <option value="2">Szerda</option>
+            <option value="3">Csütörtök</option>
+            <option value="4">Péntek</option>
+            <option value="5">Szombat</option>
+            <option value="6">Vasárnap</option>
+        </select>
+        <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-sm">MUTASD!</button>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-4"></div>
@@ -81,16 +96,18 @@
         </div>
     </div>
     <br>
-    <a href="/index.html">
-        <h1>VISSZA</h1>
-    </a>
-
-    <!--     <div class="form-group">
-        <label for="">Feltét</label>
-        <input type="text" name="top-input" class="form-control">
-    </div> -->
-
+    <a href="/index.html">VISSZA</a>
     <script src="/js/script.js"></script>
+    <script src="/js/weather.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

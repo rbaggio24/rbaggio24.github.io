@@ -26,3 +26,9 @@ table {
     border-radius: 20px;
     box-shadow: inset 0 0 20px #000000;
 }
+
+.weatherwidget {
+    margin-top: 0px;
+    padding: 10px;
+    border-bottom: solid;
+}

@@ -6,9 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About</title>
   <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/colors.css">
 </head>
 
-<body>
+<body onload="weatherWidget()">
+  <div class="weatherwidget">
+    <div class="float-right"><span class="show-celsius" id="celsius">0</span>&#8451;</div>
+    <h3>Időjárás</h3>
+    <div class="row justify-content-center">
+      <h6 id="stat1">-</h6>
+      <h6 id="stat2">-</h6>
+      <h6 id="stat3">-</h6>
+    </div>
+    <div class="float-right">Mai ajánlatunk: <span class="show-offers" id="offers">-</div>
+    <select name="weatherday" id="weatherday">
+      <option value="0">Hétfő</option>
+      <option value="1">Kedd</option>
+      <option value="2">Szerda</option>
+      <option value="3">Csütörtök</option>
+      <option value="4">Péntek</option>
+      <option value="5">Szombat</option>
+      <option value="6">Vasárnap</option>
+    </select>
+    <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-sm">MUTASD!</button>
+  </div>
   <h1>About</h1>
   <ul>
     <li><a href="/">Home</a></li>
@@ -54,6 +75,7 @@
         </div>
       </div>
     </div>
+    <script src="/js/weather.js"></script>
 </body>
 
 </html>

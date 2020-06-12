@@ -10,8 +10,22 @@
     <script src="https://kit.fontawesome.com/1195a53e08.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <h1>Products</h1>
+<body onload="weatherWidget()">
+    <div class="weatherwidget">
+        <div class="float-right"><span class="show-celsius" id="celsius">0</span>&#8451;</div>
+        <h1>Időjárás</h1>
+        <div class="float-right">Mai ajánlatunk: <span class="show-offers" id="offers">-</div>
+        <select name="weatherday" id="weatherday">
+            <option value="0">Hétfő</option>
+            <option value="1">Kedd</option>
+            <option value="2">Szerda</option>
+            <option value="3">Csütörtök</option>
+            <option value="4">Péntek</option>
+            <option value="5">Szombat</option>
+            <option value="6">Vasárnap</option>
+        </select>
+        <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-sm">MUTASD!</button>
+    </div>
     <br><br>
     <div class="container">
         <div class="row">
@@ -110,8 +124,10 @@
                 </table>
             </div>
         </div>
+        
     </div>
+    <a href="/index.html" class="float-right"><h2>Vissza</h2></a>
+    <script src="/js/weather.js"></script>
 </body>
-<a href="/index.html">Vissza</a>
 
 </html>
