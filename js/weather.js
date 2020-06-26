@@ -12,12 +12,19 @@ $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat=47.5&lon=19.04&un
 });
 
 window.onload = function () {
+    document.getElementById("weatherday").value = countTheDay();
     showTemp();
     lowestDegree();
     highestDegree();
     averageDegree();
     showOffer();
 };
+
+function countTheDay() {
+    let today = new Date();
+    let index = today.getDay();
+    return index === 0 ? 6 : index - 1;
+}
 
 function calcTemp(element, type, postFix) {
     if (type === "toC") {
