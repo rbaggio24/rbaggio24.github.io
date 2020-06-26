@@ -1,7 +1,6 @@
 document.querySelector("#weatherday").addEventListener("change", showTemp);
 
 let weatherDays = new Array();
-let currentTemp = 0;
 
 $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat=47.5&lon=19.04&units=metric&exclude=current,minutely,hourly&appid=80ad945aef5a99c13c4493187d26f66c', function (data) {
     for (let i = 0; i < data.daily.length - 1; i++) {
@@ -10,7 +9,6 @@ $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat=47.5&lon=19.04&un
         let index = d.getDay();
         index === 0 ? weatherDays.splice(6, 0, Math.round(data.daily[i].temp.day)) : weatherDays.splice(index - 1, 0, Math.round(data.daily[i].temp.day))
     }
-    currentTemp = weatherDays[parseInt(document.getElementById("weatherday").value)];
 });
 
 window.onload = function () {
@@ -39,16 +37,18 @@ function changeTemp(type) {
 };
 
 function showTemp() {
+    let currentTemp = weatherDays[parseInt(document.getElementById("weatherday").value)];
     if (document.getElementById('cel').checked === true) {
         document.getElementById("celsius").innerHTML = currentTemp + "&#8451;";
     } else {
         document.getElementById("celsius").innerHTML = Math.round(currentTemp * 1.8) + 32 + "&#8457;";
     }
+    showOffer(currentTemp);
 };
 
-function showOffer() {
+function showOffer(currentTemp) {
     let dailyOffers = ["forró csoki", "meleg tea", "finom süti", "fagyi", "jéghideg limonádé"];
-    let offerMax = [0, 15, 20, 25, 50];
+    let offerMax = [0, 20, 25, 30, 50];
     for (let i = 0; i < offerMax.length; i++) {
         if (currentTemp <= offerMax[i]) {
             document.getElementById("offers").innerHTML = dailyOffers[i];
