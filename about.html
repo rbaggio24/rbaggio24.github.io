@@ -7,18 +7,16 @@
   <title>About</title>
   <link rel="stylesheet" href="/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/colors.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body onload="weatherWidget()">
+<body>
   <div class="weatherwidget">
-    <div class="float-right"><span class="show-celsius" id="celsius">0</span>&#8451;</div>
-    <h3>Időjárás</h3>
-    <div class="row justify-content-center">
-      <h6 id="stat1">-</h6>
-      <h6 id="stat2">-</h6>
-      <h6 id="stat3">-</h6>
+    <div class="float-right">
+      <div class="show-celsius" id="celsius" value="100">0</div>
     </div>
-    <div class="float-right">Mai ajánlatunk: <span class="show-offers" id="offers">-</div>
+    <h5>Időjárás</h5>
+    
     <select name="weatherday" id="weatherday">
       <option value="0">Hétfő</option>
       <option value="1">Kedd</option>
@@ -28,7 +26,22 @@
       <option value="5">Szombat</option>
       <option value="6">Vasárnap</option>
     </select>
-    <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-sm">MUTASD!</button>
+    <div class="row justify-content-between">
+    <form action="" class="col-2">
+      <input type="radio" id="cel" name="cel" value="celsius" checked="checked" onchange="changeTemp('toC')">
+      <label for="celsius">Celsius</label>
+      <input type="radio" id="fahr" name="fahr" value="fahrenheit" onchange="changeTemp('toF')">
+      <label for="fahrenheit">Fahrenheit</label>
+    </form>
+    <div class="col-3">
+      <div class="row justify-content-between">
+      <h6 id="stat1">-</h6>
+      <h6 id="stat2">-</h6>
+      <h6 id="stat3">-</h6>
+    </div>
+    </div>
+    <div class="col-3" id="ajanlat">Mai ajánlatunk: <span class="show-offers" id="offers">-</div>
+    </div>
   </div>
   <h1>About</h1>
   <ul>

@@ -26,14 +26,15 @@ body {
     font-weight: 500;
 }
 
+h5 {
+    font-size: 20px;
+}
+
 .float-right {
     font-size: 20px;
 }
 
-#stat1 {
-    margin-right: 50px;
-}
-
-#stat3 {
-    margin-left: 50px;
+#ajanlat {
+    font-weight: 900;
+    margin-top: -5px;
 }
